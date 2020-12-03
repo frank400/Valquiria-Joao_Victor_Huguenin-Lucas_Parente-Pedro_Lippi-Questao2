@@ -82,8 +82,5 @@ void main() {
     scanf("%d", &x);
     percorrendoCidades(mat, x, vet, soma);
     system("PAUSE");
-    return 0;
-
-    return 0;
 }
 
