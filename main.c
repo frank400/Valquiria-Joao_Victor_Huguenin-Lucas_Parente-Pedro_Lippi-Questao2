@@ -86,7 +86,6 @@ void percorrendoCidades(int mat[DIM][DIM], int x, int vet[DIM], int soma)
         k++;
     }
 
-
     soma_mil = soma_mil + mat[x][primeiro];
     if (soma_mil > 1000)
     {
@@ -104,9 +103,32 @@ void percorrendoCidades(int mat[DIM][DIM], int x, int vet[DIM], int soma)
     printf("Custo: %d\n", soma);
 }
 
-void main(){
+void main()
+{
 
+    int x, soma = 0;
+    int vet[30];
+    int mat[DIM][DIM];
+
+    for (int i = 0; i < DIM; i++)
+    {
+        vet[i] = -1;
+    }
+    for (int i = 0; i < DIM; i++)
+    {
+        for (int j = 0; j < DIM; j++)
+        {
+            mat[i][j] = 0;
+        }
+    }
+    lerMatriz(mat);
+    espelhamentoMatriz(mat);
+    imprimirMatriz(mat);
+    printf("digite a cidade que voce esta:\n");
+    scanf("%d", &x);
+    percorrendoCidades(mat, x, vet, soma);
+    system("PAUSE");
+    return 0;
 
     return 0;
 }
-
